@@ -35,20 +35,30 @@ limitations under the License.
 
 > Test if a value is an array-like object containing only [safe integers][@stdlib/assert/is-safe-integer].
 
+<section class="installation">
 
+## Installation
+
+```bash
+npm install @stdlib/assert-is-safe-integer-array
+```
+
+Alternatively,
+
+-   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm` branch][esm-url].
+-   If you are using Deno, visit the [`deno` branch][deno-url].
+-   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd` branch][umd-url].
+
+The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
+
+</section>
 
 <section class="usage">
 
 ## Usage
 
 ```javascript
-import isSafeIntegerArray from 'https://cdn.jsdelivr.net/gh/stdlib-js/assert-is-safe-integer-array@deno/mod.js';
-```
-
-You can also import the following named exports from the package:
-
-```javascript
-import { objects, primitives } from 'https://cdn.jsdelivr.net/gh/stdlib-js/assert-is-safe-integer-array@deno/mod.js';
+var isSafeIntegerArray = require( '@stdlib/assert-is-safe-integer-array' );
 ```
 
 #### isSafeIntegerArray( value )
@@ -58,7 +68,7 @@ Tests if a `value` is an array-like object containing **only** [safe `integer`][
 <!-- eslint-disable no-new-wrappers -->
 
 ```javascript
-import Number from 'https://cdn.jsdelivr.net/gh/stdlib-js/number-ctor@deno/mod.js';
+var Number = require( '@stdlib/number-ctor' );
 
 var bool = isSafeIntegerArray( [ -3, new Number(3) ] );
 // returns true
@@ -77,7 +87,7 @@ Tests if a `value` is an array-like object containing **only** primitive [safe `
 <!-- eslint-disable no-new-wrappers -->
 
 ```javascript
-import Number from 'https://cdn.jsdelivr.net/gh/stdlib-js/number-ctor@deno/mod.js';
+var Number = require( '@stdlib/number-ctor' );
 
 var bool = isSafeIntegerArray.primitives( [ -1.0, 0.0, 4.0 ] );
 // returns true
@@ -96,7 +106,7 @@ Tests if a `value` is an array-like object containing **only** `Number` objects 
 <!-- eslint-disable no-new-wrappers -->
 
 ```javascript
-import Number from 'https://cdn.jsdelivr.net/gh/stdlib-js/number-ctor@deno/mod.js';
+var Number = require( '@stdlib/number-ctor' );
 
 var bool = isSafeIntegerArray.objects( [ new Number(-1.0), new Number(2.0) ] );
 // returns true
@@ -121,8 +131,8 @@ bool = isSafeIntegerArray.objects( [ -3.0, new Number(1.0) ] );
 <!-- eslint no-undef: "error" -->
 
 ```javascript
-import Number from 'https://cdn.jsdelivr.net/gh/stdlib-js/number-ctor@deno/mod.js';
-import isSafeIntegerArray from 'https://cdn.jsdelivr.net/gh/stdlib-js/assert-is-safe-integer-array@deno/mod.js';
+var Number = require( '@stdlib/number-ctor' );
+var isSafeIntegerArray = require( '@stdlib/assert-is-safe-integer-array' );
 
 var bool = isSafeIntegerArray( [ -5, 0, 2, 5 ] );
 // returns true
@@ -174,7 +184,7 @@ bool = isSafeIntegerArray( [] );
 
 ## Notice
 
-This package is part of [stdlib][stdlib], a standard library with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
+This package is part of [stdlib][stdlib], a standard library for JavaScript and Node.js, with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
 
 For more information on the project, filing bug reports and feature requests, and guidance on how to develop [stdlib][stdlib], see the main project [repository][stdlib].
 
@@ -191,7 +201,7 @@ See [LICENSE][stdlib-license].
 
 ## Copyright
 
-Copyright &copy; 2016-2023. The Stdlib [Authors][stdlib-authors].
+Copyright &copy; 2016-2024. The Stdlib [Authors][stdlib-authors].
 
 </section>
 
@@ -236,9 +246,9 @@ Copyright &copy; 2016-2023. The Stdlib [Authors][stdlib-authors].
 
 <!-- <related-links> -->
 
-[@stdlib/assert/is-array]: https://github.com/stdlib-js/assert-is-array/tree/deno
+[@stdlib/assert/is-array]: https://github.com/stdlib-js/assert-is-array
 
-[@stdlib/assert/is-safe-integer]: https://github.com/stdlib-js/assert-is-safe-integer/tree/deno
+[@stdlib/assert/is-safe-integer]: https://github.com/stdlib-js/assert-is-safe-integer
 
 <!-- </related-links> -->
 
